@@ -4,13 +4,17 @@
     padding: 0px; /* Espaçamento do texto para borda */
 } /* Padrão para resetar as configurações automaticas de espaçamento da página. Resetando a página */
 
-#pano-de-fundo /* Chamando um id <.id> */{
+.pano-de-fundo /* Chamando uma classe <.classe> */{
     background: linear-gradient(to bottom, black 21%, #680101 50%, #a30202 90%, #cb0101 100%); /* Define o fundo de um elemento HTML - linear-gradient, cria uma transição de cores <no exemplo o top é preto e o bottom vermelho < % - indica até que porcentagem da altura a cor é aplicada> */
 
     border-width: 3px; /* Define a largura da borda */
     border-style: solid; /* Define o tipo de linha que será usado - solid, idica que da para ver a borda */
-    border-image: linear-gradient(to bottom, black 15%, #5c0101 30%, #de0303 90%, red 100%) 1; /* Permite usar uma imagem ou gradiente como borada pois usando o border isso não é possível */
+    border-image: linear-gradient(to bottom, black 15%, #5c0101 30%, #de0303 90%, red 100%) 1; /* Permite usar uma imagem ou gradiente como borada pois usando o border isso não é possível - 1, */
 } /* Configurando um pano de fundo padrão para ser usando nos cards de apresentar informações */
+
+a{
+    font-weight: 900;
+}
 
 body /* Chamando uma tag <tag> */{
     color: #ffffff; /* Define a cor do texto da tag */
@@ -23,7 +27,7 @@ body /* Chamando uma tag <tag> */{
     background-position: center center; /* Define onde a imagem será posicionada na tag - center center, indica que ela vai ser posicionada no centro da tag */
     
     min-height: 100vh;  /* Define uma altura minima que a tag vai ocupar - vh, faz como que independente do elemento pai a tag vai ocupar 100% da viewport */
-} /* Configurando o fundo do boy e as suas dimenções */
+} /* Configurando o fundo do body e as suas dimenções */
 
 hr{
     border: 1px dashed #ffffff; /* Define a borda de um elemento HTML - dashed, tipo de estilo de linha, no caso esse estilo faz a borda aparecer tracejada */
@@ -41,7 +45,7 @@ header{
 
     border-left: 20px ; /* Define a borda esquerda da tag */
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Define a espaço externo em baixo da tag */
 
     background: linear-gradient(to bottom, black 10%, #4b0000 43%, #de0303 90%, red 100%);
 
@@ -74,8 +78,7 @@ h1{
 
 
 /* CONFIGURAÇÃO DA APRESENTAÇÃO DE INFORMAÇÕES */
-/* PRINCIPAL */
-.apresentar-informacoes /* Chamando uma classe <.classe> */{
+main{
     display: flex;  /* Transforma o elemento em flex */
     justify-content: center; /* Configura a centralização horizontal do texto no flex */
     align-items: flex-start; /* Configura a centralização vertical do texto no flex - flex-start, alinha os elementos no topo <no começo do flex> */
@@ -84,6 +87,7 @@ h1{
     margin-top: 150px; /* Define uma margem somente no topo */
 }
 
+/* PRINCIPAL */
 .caixa-de-conteudo-principal{
     text-align: center;
     
@@ -113,23 +117,22 @@ h1{
 }
 
 /* SECUNDÁRIO */
-.caixa-de-conteudo-secundario{
+aside{
     background-color: rgba(0, 0, 0, 0.87);
-    border: 3px solid #3e0717;
 
     font-family: "Caprasimo", serif;
 }
 
-.caixa-de-conteudo-secundario > ol{
+aside > ol{
     list-style-type: none;
     
 }
-.caixa-de-conteudo-secundario > ol > li {
+aside > ol > li {
     margin: 3px;
     padding: 5px;
 }
 
-.caixa-de-conteudo-secundario a{
+aside a{
     text-decoration: none;
 
     font-family: "Bilbo Swash Caps", cursive;
@@ -144,7 +147,7 @@ h1{
 
     margin: 10px;
 
-    grid-template-columns: 1fr 1fr 1fr; /* Criando 3 colunar da tamanho igual dentro do container grid */
+    grid-template-columns: repeat(3,1fr); /* Criando 3 colunar da tamanho igual dentro do container grid - repeat, repete 1fr 3 vez, ai eu não tenho que escrever manualmente */
 }
 .cards div{
     margin: 3px;
