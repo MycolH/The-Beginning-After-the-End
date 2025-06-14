@@ -1,0 +1,38 @@
+Sobre o CSS
+
+    display: ; < muda o tipo do elemento: Inline, Block; Grid; ... >
+        - display: none; // Elemento não será exibido.
+		- display: inline-block; // Elemento renderizado como bloco, mas em linha.
+        - display: flex; // 
+
+        Grid
+            display: grid;
+            Ferramenta do CSS usada para criar layouts bidimensionais na web - permite organizar elementos em linhas e colunas, de forma fácil, responsiva e controlada.
+        Flet
+            display: flet;
+            Ferramenta do CSS usada para resolver problemas de alinhamento, distribuição e organização de elementos dentro de um contêiner de forma simples e eficiente.
+                - justify-content
+                - align-items
+                - flex-wrap
+                - flex-direction
+                    flex-direction: column; // Define a direção do layout dos itens - por padão: row, alinha os itens na horizontal. column, alinha os itens na vertical
+                - flex-grow
+                    flex-grow: 1; // Define a capacidade de um item crescer para poder ocupar o espaço disponível no contêiner. 1, significa que pode ocupar todo o espaço disponível restante
+                - order
+                - align-self
+            
+    
+    position: ; < define como um elemento é posicionado na página > 
+        - position: static; // Padrão;
+        - position: relative; //
+        - position: absolute; //
+        - position: fixed; // Fixa o elemento em um lugar específico da tela.
+            # Não segue o fluxo de renderização da página. 
+
+    cor
+        rgba(R, G, B, A)
+            - R [Red]: Intensidade de vermelho (0 – 255)
+            - G [Green]: Intensidade de verde (0 – 255)
+            - B [Blue]: Intensidade de azul (0 – 255)
+            - A [Alpha]: Opacidade (de 0 a 1)
+            

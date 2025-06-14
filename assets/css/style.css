@@ -1,0 +1,192 @@
+*{
+    margin: 0px; /* Espaçamento externo */
+    border: 0px; /* Define a borda */
+    padding: 0px; /* Espaçamento do texto para borda */
+} /* Padrão para resetar as configurações automaticas de espaçamento da página. Resetando a página */
+
+#pano-de-fundo /* Chamando um id <.id> */{
+    background: linear-gradient(to bottom, black 21%, #680101 50%, #a30202 90%, #cb0101 100%); /* Define o fundo de um elemento HTML - linear-gradient, cria uma transição de cores <no exemplo o top é preto e o bottom vermelho < % - indica até que porcentagem da altura a cor é aplicada> */
+
+    border-width: 3px; /* Define a largura da borda */
+    border-style: solid; /* Define o tipo de linha que será usado - solid, idica que da para ver a borda */
+    border-image: linear-gradient(to bottom, black 15%, #5c0101 30%, #de0303 90%, red 100%) 1; /* Permite usar uma imagem ou gradiente como borada pois usando o border isso não é possível */
+} /* Configurando um pano de fundo padrão para ser usando nos cards de apresentar informações */
+
+body /* Chamando uma tag <tag> */{
+    color: #ffffff; /* Define a cor do texto da tag */
+    background-color: #000000; /* Define a cor do fundo da tag */
+
+    background-image: url("../../img/ArthurSylvie.png"); /* Definindo uma imagem como pano de fundo dessa tag */
+    background-repeat: no-repeat; /* Define se uma imagem de fundo repete ou não - no-repeat, faz com que não repita a imagem de fundo */
+    background-size: contain; /* Define as dimensões do pano de fundo - contain, Mantém proporção da imagem, sem distorção */
+    background-attachment: fixed; /* Como o pano de fundo se comporta em relação ao scroll da página - fixed, fundo fica fixo na tela, ele não move com o conteúdo da página */
+    background-position: center center; /* Define onde a imagem será posicionada na tag - center center, indica que ela vai ser posicionada no centro da tag */
+    
+    min-height: 100vh;  /* Define uma altura minima que a tag vai ocupar - vh, faz como que independente do elemento pai a tag vai ocupar 100% da viewport */
+} /* Configurando o fundo do boy e as suas dimenções */
+
+hr{
+    border: 1px dashed #ffffff; /* Define a borda de um elemento HTML - dashed, tipo de estilo de linha, no caso esse estilo faz a borda aparecer tracejada */
+    margin: 12px;
+} /* Configurando a tag que cria uma linha horizontal */
+
+
+/* CONFIGURANDO BARRA DE LOCALIZAÇÃO */
+header{
+    position: fixed; /* Define como o elemento é posicionado na página */
+
+    top: 0px; /* Siginifica que o elemento vai ficar no topo da tela, sem espaço entre ele e o topo da janela do elemento */
+    left: 0px; /* Siginifica que o elemento vai ficar no lado esquerdo da tela, sem espaço entre ele e a janela do elemento */
+    width: 100%; /* Configura a largura do elemento */
+
+    border-left: 20px ; /* Define a borda esquerda da tag */
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(to bottom, black 10%, #4b0000 43%, #de0303 90%, red 100%);
+
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, black 21%, #5c0101 50%, #de0303 81%, red 100%) 1;
+
+    text-align: left; /* Gerencia a centralização do texto dessa tag - left, alinha na esqueda do elemento HTML */
+    font-family: "Dancing Script", cursive; /* Definindo o estilo do texto - "Dancing Script", é o estilo & cursive, indica qual estilo o sistema usar caso não encontre a que eu especifiquei, no exemplo é cursiva */
+}
+
+header nav a{
+    text-decoration: none;  /* Controla a decoração aplicada ao texto - none, remove qualquer decoração */
+
+    font-family: "Bilbo Swash Caps", cursive;
+    font-size: 15px; /* Muda o tamanha da fonte do texto */
+    color: #0000FF;
+}
+
+header h1, header nav{
+    display: inline-block; /* Transforma o elemento em inline e block ao mesmo tempo */
+    vertical-align: middle; /* Alinha verticalmente elementos 'inline' e 'inline-block' em relação a outros elementos na mesma linha - middle, alinha o meio do elemento com o meio da linha base do conteúdo vizinho <outra tag> */
+}
+
+h1{
+    font-size: 20px;
+
+    margin-right: 25px; /* Define uma margem na lateral direita */
+}
+
+
+/* CONFIGURAÇÃO DA APRESENTAÇÃO DE INFORMAÇÕES */
+/* PRINCIPAL */
+.apresentar-informacoes /* Chamando uma classe <.classe> */{
+    display: flex;  /* Transforma o elemento em flex */
+    justify-content: center; /* Configura a centralização horizontal do texto no flex */
+    align-items: flex-start; /* Configura a centralização vertical do texto no flex - flex-start, alinha os elementos no topo <no começo do flex> */
+    gap: 7px; 
+    
+    margin-top: 150px; /* Define uma margem somente no topo */
+}
+
+.caixa-de-conteudo-principal{
+    text-align: center;
+    
+    max-width: 750px; /* Define um largura máxima que o elemento pode ter */
+    padding: 5px;
+
+}
+
+.caixa-de-conteudo-principal h2{
+    padding: 10px ;
+
+    font-family: "Great Vibes", cursive;
+    font-size: 19px;
+}
+
+.caixa-de-conteudo-principal > img{
+    margin: 32px;
+}
+
+.caixa-de-conteudo-principal nav a{
+    margin-right: 25px;
+
+    text-decoration: none;
+    font-family: "Bilbo Swash Caps", cursive;
+    font-size: 17px;
+    color: #0000FF;
+}
+
+/* SECUNDÁRIO */
+.caixa-de-conteudo-secundario{
+    background-color: rgba(0, 0, 0, 0.87);
+    border: 3px solid #3e0717;
+
+    font-family: "Caprasimo", serif;
+}
+
+.caixa-de-conteudo-secundario > ol{
+    list-style-type: none;
+    
+}
+.caixa-de-conteudo-secundario > ol > li {
+    margin: 3px;
+    padding: 5px;
+}
+
+.caixa-de-conteudo-secundario a{
+    text-decoration: none;
+
+    font-family: "Bilbo Swash Caps", cursive;
+    font-size: 15px;
+    color: #0000FF;
+}
+
+
+/* FORMANDO OS CADS DE REDIRECIONAMENTO */
+.cards{
+    display: grid; /* Transformando o elemento em um container grid */
+
+    margin: 10px;
+
+    grid-template-columns: 1fr 1fr 1fr; /* Criando 3 colunar da tamanho igual dentro do container grid */
+}
+.cards div{
+    margin: 3px;
+    box-sizing: border-box; /* Propriedade que define como a largura e a altura são calculadas - boder-box: A largura e a altura incluem o conteúdo, o padding e o border */
+
+    text-align: center;
+
+    position: relative;
+}
+.cards div img {
+    width: 100%; 
+    height: auto; /*Configura a altura do elemento */
+
+    border-radius: 15px; /* Arredonda os cantos até se tornar um circulo */
+}
+.cards div p {
+    position: absolute;
+
+    color: #000000;
+    bottom: 10px;
+
+    width: 100%;
+}
+
+
+/* RODAPÉ DA PÁGINA */
+footer{
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(to bottom, black 10%, #4b0000 43%, #de0303 90%, red 100%);
+
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, black 21%, #5c0101 50%, #de0303 81%, red 100%) 1;
+
+    margin-top: 25px;
+    padding: 10px;
+
+    gap: 35px;
+}
+
+footer li{
+    list-style-type: none;
+}
